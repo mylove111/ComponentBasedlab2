@@ -36,7 +36,18 @@ const events = ref<Event[]>([
     time: '11:00',
     petsAllowed: false,
     organizer: 'Carey Wales'
-  }
+  },
+  {
+    id:20222109,
+    category:"social walfare",
+    title:"Greeting the elderly",
+    description:"Help oderly to do something.",
+    location:"Sunshine nursing Home",
+    date:"October 13, 2022",
+    time:"09:00",
+    petsAllowed:false,
+    organizer:"Chance"
+  }  
 ])
 </script>
 
