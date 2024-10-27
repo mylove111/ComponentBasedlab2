@@ -8,10 +8,13 @@
     </div>
   </template>
   
-  <script setup>
+  <script setup lang="ts">
+  import type { Event } from '@/type'
+
   defineProps({
     category: String,
-    organizer: String
+    organizer: String,
+    event: Event
   });
   </script>
   
