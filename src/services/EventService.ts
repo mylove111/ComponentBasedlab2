@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const apiClient = axios.create({
-  baseURL: '[your mock server url]',
+  baseURL: 'https://my-json-server.typicode.com/mylove111/ComponentBasedlab2',
   withCredentials: false,
   headers: {
     Accept: 'application/json',
