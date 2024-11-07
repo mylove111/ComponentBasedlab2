@@ -1,11 +1,11 @@
 <!-- src/views/StudentListView.vue -->
 <template>
       <div>
-        <h1>Student Information</h1>
-        <div class="student-list">
+        <h1 class="text-3xl font-bold mb-6">Student Information</h1>
+        <div class="student-list flex flex-wrap justify-center">
           <div v-for="student in students" :key="student.id" class="student-card">
-            <h2>{{ student.name }} {{ student.surname }}</h2>
-            <span>GPA: {{ student.gpa }}</span>
+            <h2 class="text-xl font-semibold">{{ student.name }} {{ student.surname }}</h2>
+            <span class="block mt-2">GPA: {{ student.gpa }}</span>
           </div>
         </div>
       </div>
@@ -29,13 +29,8 @@
     </script>
     
     <style scoped>
-    .student-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    
-    .student-card {
+ 
+ .student-card {
       padding: 20px;
       width: 250px;
       cursor: pointer;

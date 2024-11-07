@@ -39,19 +39,20 @@ watchEffect(() => {
 </script>
 
 <template>
-  <h1>Event For Good</h1>
-  <div class="events">
+  <h1 class="text-3xl font-bold mb-6">Event For Good</h1>
+  <div class="flex flex-col items-center">
     <div v-for="event in events" :key="event.id" class="event-container">
       <EventCard :event="event" />
       <EventInfo :category="event.category" :organizer="event.organizer" />
     </div>
-    <div class="pagination">
+    <div class="pagination flex items-center space-x-2">
       <p>{{ currentPage }} / {{ totalPages }}</p>
       <RouterLink
         id="page-prev"
         :to="{ name: 'event-list-view', query: { page: page - 1, pageSize: pageSize } }"
         rel="prev"
         v-if="currentPage !== 1"
+        class="underline text-blue-500"
         >&#60; Prev Page</RouterLink
       >
       <RouterLink
@@ -59,6 +60,7 @@ watchEffect(() => {
         :to="{ name: 'event-list-view', query: { page: page + 1, pageSize: pageSize } }"
         rel="next"
         v-if="hasNexPage"
+        class="underline text-blue-500"
         >Next Page &#62;</RouterLink
       >
     </div>
@@ -66,12 +68,6 @@ watchEffect(() => {
 </template>
 
 <style scoped>
-.events {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
 
 .event-container {
   display: flex;
